@@ -21,7 +21,10 @@ const ComponentScreen = () => {
             </Text>
             {nama}
             {nama1}
+            
+            
         </View> 
+        
     );
 };
 
