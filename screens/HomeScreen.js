@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button, ImageBackground, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import { View, Text, ImageBackground, StyleSheet, TouchableOpacity, Image} from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
     
@@ -23,12 +23,13 @@ const HomeScreen = ({ navigation }) => {
           <Text style={styles.loginText}>Kost Cowok</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.buttonContainer, styles.aboutButton]} onPress={() => navigation.navigate('Component')}>
-          <Text style={styles.loginText}>About</Text>
-        </TouchableOpacity>
         
         <TouchableOpacity style={[styles.buttonContainer, styles.unklabButton]} onPress={() => navigation.navigate('unklab')}>
           <Text style={styles.loginText}>Unklab Introduction</Text>
+        </TouchableOpacity>
+        
+        <TouchableOpacity style={[styles.buttonContainer, styles.aboutButton]} onPress={() => navigation.navigate('Component')}>
+          <Text style={styles.loginText}>About</Text>
         </TouchableOpacity>
 
         </View>
@@ -36,20 +37,15 @@ const HomeScreen = ({ navigation }) => {
         
     );
 };
-const resizeMode = 'center';
 
 const styles = StyleSheet.create({
     
     buttonContainer: {
       height:60,
-      flexDirection: 'row',
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginTop: 60,
-      marginEnd: 100,
-      marginLeft:95,
-      marginRight:100,
-      width:175,
+      width:190,
+      marginLeft:'auto',
+      marginRight:'auto',
+      marginTop:60,
       borderRadius:30,
     },
     cowokButton: {

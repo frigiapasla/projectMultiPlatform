@@ -3,9 +3,9 @@ import { Text, StyleSheet, View, Image } from 'react-native';
 
 const ComponentScreen = () => {
 
-    const myName = 'By:';
-    const nama = <Text>Pasla, Frigia Faby</Text>;
-    const nama1 = <Text>Siar, Audrey</Text>;
+    const by = 'By:';
+    const nama = "Pasla, Frigia Faby";
+    const nama2 = "Siar, Audrey H Joy Lord Regi";
 
     return (
         <View>
@@ -17,10 +17,16 @@ const ComponentScreen = () => {
                 Final Project MultiPlatform
             </Text>
             <Text style={styles.textStyle2}>
-                {myName}
+                {by}
             </Text>
-            {nama}
-            {nama1}
+            <Text style={{
+                marginLeft:'auto',
+                marginRight:'auto',
+                
+            }}>
+                {nama}
+                {nama2}
+            </Text>
             
             
         </View> 
@@ -31,11 +37,15 @@ const ComponentScreen = () => {
 const styles = StyleSheet.create({
     textStyle: {
         fontSize: 26,
+        marginLeft:'auto',
+        marginRight:'auto',
         color: 'blue'
     },
     textStyle2: {
         fontSize: 22,
-        color: 'red'
+        color: 'red',
+        marginLeft:'auto',
+        marginRight:'auto'
     }
 });
 
