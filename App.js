@@ -7,6 +7,7 @@ import KostCowokScreen from './screens/KostCowokScreen';
 import unklabvideo from './screens/unklabvideo';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import DetailKostScreen from './screens/DetailKostScreen';
+import LoginScreen from './screens/LoginScreen';
 
 
 const navigator = createStackNavigator({
@@ -15,9 +16,10 @@ const navigator = createStackNavigator({
   Home: HomeScreen,
   Cowok: KostCowokScreen,
   unklab: unklabvideo,
-  Detail: DetailKostScreen
+  Detail: DetailKostScreen,
+  Login: LoginScreen
 },{
-  initialRouteName: 'Home',
+  initialRouteName: 'Login',
   defaultNavigationOptions: {
     headerTitle: 'Kost Finder'
   }
