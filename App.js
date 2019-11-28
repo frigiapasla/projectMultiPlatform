@@ -6,6 +6,7 @@ import KostCewekScreen from './screens/KostCewekScreen';
 import KostCowokScreen from './screens/KostCowokScreen';
 import unklabvideo from './screens/unklabvideo';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
+import DetailKostScreen from './screens/DetailKostScreen';
 
 
 const navigator = createStackNavigator({
@@ -13,7 +14,8 @@ const navigator = createStackNavigator({
   Cewek: KostCewekScreen,
   Home: HomeScreen,
   Cowok: KostCowokScreen,
-  unklab: unklabvideo
+  unklab: unklabvideo,
+  Detail: DetailKostScreen
 },{
   initialRouteName: 'Home',
   defaultNavigationOptions: {

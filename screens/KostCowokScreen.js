@@ -19,19 +19,19 @@ export default class Menu extends Component {
     super(props);
     this.state = {
       data: [
-        {nama:"Kost Mizpa1", harga: "500.000/bulan", jarak: "350 meter from unklab",      color:"#FF4500", image:"https://img.icons8.com/color/70/000000/name.png"},
-        {nama:"Kost Karundeng Boys", harga: "300.000/bulan", jarak: "240 meter from unklab",     color:"#87CEEB", image:"https://img.icons8.com/office/70/000000/home-page.png"},
-        {nama:"Kost Imanuel Boys", harga: "600.000/bulan", jarak: "280 meter from unklab",     color:"#4682B4", image:"https://img.icons8.com/color/70/000000/two-hearts.png"} ,
-        {nama:"Kost Charity", harga: "700.000/bulan", jarak: "210 meter from unklab",   color:"#6A5ACD", image:"https://img.icons8.com/color/70/000000/family.png"} ,
-        {nama:"Kost Kaumpungan Boys",harga: "800.000/bulan",  jarak: "400 meter from unklab",  color:"#FF69B4", image:"https://img.icons8.com/color/70/000000/groups.png"} ,
-        {nama:"Kost Mambu",  harga: "1.000.000/bulan",jarak: "350 meter from unklab",   color:"#00BFFF", image:"https://img.icons8.com/color/70/000000/classroom.png"} ,
-        {nama:"Kost Boys", harga: "600.000/bulan", jarak: "300 meter from unklab",   color:"#00FFFF", image:"https://img.icons8.com/dusk/70/000000/checklist.png"} ,
+        {nama:"Kost Mizpa1", lokasi:"Kanaan",nomor: "08134567890",harga: "500.000/bulan", jarak: "350 meter from unklab",      color:"#FF4500", image:"https://img.icons8.com/color/70/000000/name.png"},
+        {nama:"Kost Karundeng Boys", lokasi:"Kanaan",nomor: "08134567890",harga: "300.000/bulan", jarak: "240 meter from unklab",     color:"#87CEEB", image:"https://img.icons8.com/office/70/000000/home-page.png"},
+        {nama:"Kost Imanuel Boys",lokasi:"Yordan",nomor: "08134567890", harga: "600.000/bulan", jarak: "280 meter from unklab",     color:"#4682B4", image:"https://img.icons8.com/color/70/000000/two-hearts.png"} ,
+        {nama:"Kost Charity",lokasi:"Yordan",nomor: "08134567890", harga: "700.000/bulan", jarak: "210 meter from unklab",   color:"#6A5ACD", image:"https://img.icons8.com/color/70/000000/family.png"} ,
+        {nama:"Kost Kaumpungan Boys",lokasi:"Yordan",nomor: "08134567890",harga: "800.000/bulan",  jarak: "400 meter from unklab",  color:"#FF69B4", image:"https://img.icons8.com/color/70/000000/groups.png"} ,
+        {nama:"Kost Mambu",  lokasi:"Kanaan",nomor: "08134567890",harga: "1.000.000/bulan",jarak: "350 meter from unklab",   color:"#00BFFF", image:"https://img.icons8.com/color/70/000000/classroom.png"} ,
+        {nama:"Kost Boys",lokasi:"Kanaan",nomor: "08134567890", harga: "600.000/bulan", jarak: "300 meter from unklab",   color:"#00FFFF", image:"https://img.icons8.com/dusk/70/000000/checklist.png"} ,
       ]
     };
   }
 
   clickEventListener(item) {
-    Alert.alert(item.harga)
+    this.props.navigation.navigate('Detail',{Harga: item.harga, Lokasi: item.lokasi, Nama: item.nama, Nomor: item.nomor})
   }
 
   render() {

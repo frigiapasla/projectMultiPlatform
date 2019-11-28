@@ -19,19 +19,19 @@ export default class Menu extends Component {
     super(props);
     this.state = {
       data: [
-        {nama:"Kost Azalea", harga: "Rp. 850.000/bulan", jarak: "70 meter from unklab",      color:"#FF4500", image:"https://img.icons8.com/color/70/000000/name.png"},
-        {nama:"Kost Gazelle", harga: "Rp. 500.000/bulan", jarak: "50 meter from unklab",     color:"#87CEEB", image:"https://img.icons8.com/office/70/000000/home-page.png"},
-        {nama:"Kost pink", harga: "Rp. 1.100.000/bulan", jarak: "285 meter from unklab",     color:"#4682B4", image:"https://img.icons8.com/color/70/000000/two-hearts.png"} ,
-        {nama:"Corner Residence", harga: "Rp. 1.000.000/bulan",  jarak: "20 meter from unklab",   color:"#6A5ACD", image:"https://img.icons8.com/color/70/000000/family.png"} ,
-        {nama:"dBlues Residence",harga: "Rp. 900.000/bulan" , jarak: "360 meter from unklab",  color:"#FF69B4", image:"https://img.icons8.com/color/70/000000/groups.png"} ,
-        {nama:"Kost Mizpa", harga: "Rp. 500.000/bulan", jarak: "300 meter from unklab",   color:"#00BFFF", image:"https://img.icons8.com/color/70/000000/classroom.png"} ,
-        {nama:"Kost Wisma Anugrah", harga: "Rp. 400.000/bulan", jarak: "270 meter from unklab",   color:"#00FFFF", image:"https://img.icons8.com/dusk/70/000000/checklist.png"} ,
+        {nama:"Kost Azalea", lokasi:"Kanaan",nomor: "08134567890",harga: "Rp. 850.000/bulan", jarak: "70 meter from unklab",      color:"#FF4500", image:"https://img.icons8.com/color/70/000000/name.png"},
+        {nama:"Kost Gazelle", lokasi: "Kanaan",nomor: "08134567890",harga: "Rp. 500.000/bulan", jarak: "50 meter from unklab",     color:"#87CEEB", image:"https://img.icons8.com/office/70/000000/home-page.png"},
+        {nama:"Kost pink", lokasi: "Yordan",nomor: "08134567890", harga: "Rp. 1.100.000/bulan", jarak: "285 meter from unklab",     color:"#4682B4", image:"https://img.icons8.com/color/70/000000/two-hearts.png"} ,
+        {nama:"Corner Residence", lokasi: "Kanaan",nomor: "08134567890",harga: "Rp. 1.000.000/bulan",  jarak: "20 meter from unklab",   color:"#6A5ACD", image:"https://img.icons8.com/color/70/000000/family.png"} ,
+        {nama:"dBlues Residence",lokasi: "Yordan",nomor: "08134567890",harga: "Rp. 900.000/bulan" , jarak: "360 meter from unklab",  color:"#FF69B4", image:"https://img.icons8.com/color/70/000000/groups.png"} ,
+        {nama:"Kost Mizpa", lokasi: "Kanaan",nomor: "08134567890",harga: "Rp. 500.000/bulan", jarak: "300 meter from unklab",   color:"#00BFFF", image:"https://img.icons8.com/color/70/000000/classroom.png"} ,
+        {nama:"Kost Wisma Anugrah", lokasi: "Yordan",nomor: "08134567890",harga: "Rp. 400.000/bulan", jarak: "270 meter from unklab",   color:"#00FFFF", image:"https://img.icons8.com/dusk/70/000000/checklist.png"} ,
       ]
     };
   }
 
   clickEventListener(item) {
-    Alert.alert(item.harga)
+    this.props.navigation.navigate('Detail',{Harga: item.harga, Lokasi: item.lokasi, Nama: item.nama, Nomor: item.nomor})
   }
 
   render() {
